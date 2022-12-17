@@ -1,0 +1,104 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": ["./tsconfig.json"]
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    // ----- REACT ----- //
+    // REF: https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules
+    "react/style-prop-object": 2,
+    "react/jsx-wrap-multilines": [
+      2,
+      {
+        "declaration": "parens",
+        "assignment": "parens",
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "condition": "ignore",
+        "logical": "ignore",
+        "prop": "ignore"
+      }
+    ],
+    "react/no-multi-comp": [
+      2,
+      {
+        "ignoreStateless": true
+      }
+    ],
+    "react/no-deprecated": 1,
+    "react/jsx-uses-react": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/prop-types": 0,
+    "react/jsx-tag-spacing": [
+      2,
+      {
+        "closingSlash": "never",
+        "beforeSelfClosing": "always",
+        "afterOpening": "never",
+        "beforeClosing": "allow"
+      }
+    ],
+    "react/jsx-no-useless-fragment": [
+      2,
+      {
+        "allowExpressions": true
+      }
+    ],
+    "react/jsx-no-script-url": 2,
+    "react/jsx-pascal-case": [
+      2,
+      {
+        "allowNamespace": true
+      }
+    ],
+    "react/jsx-no-leaked-render": 2,
+    "react/jsx-max-props-per-line": [1],
+    "react/jsx-max-depth": [
+      1,
+      {
+        "max": 5
+      }
+    ],
+    "react/jsx-closing-bracket-location": 2,
+    "react/jsx-indent-props": [1, 2],
+
+    // ----- REACT HOOKS ----- //
+    // REF: https://www.npmjs.com/package/eslint-plugin-react-hooks
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 1,
+
+    // ----- TYPESCRIPT ----- //
+    // REF: https://typescript-eslint.io/rules/
+    "@typescript-eslint/prefer-enum-initializers": 2,
+    "@typescript-eslint/prefer-as-const": 2,
+    "@typescript-eslint/no-useless-empty-export": 2,
+    "@typescript-eslint/no-unnecessary-type-arguments": 2,
+    "@typescript-eslint/no-floating-promises": 2,
+    "@typescript-eslint/no-non-null-assertion": 2,
+    "@typescript-eslint/no-empty-interface": 2,
+    "@typescript-eslint/no-explicit-any": 2, // Note: возможно поправится
+    "@typescript-eslint/no-require-imports": 1,
+    "@typescript-eslint/consistent-indexed-object-style": 1,
+    "@typescript-eslint/ban-ts-comment": 0,
+
+    // ----- DEFAULT ESLINT ----- //
+    "semi": [2, "never"]
+  }
+}
