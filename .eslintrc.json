@@ -23,6 +23,12 @@
   "rules": {
     // ----- REACT ----- //
     // REF: https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules
+    "react/no-unknown-property": [
+      2,
+      {
+        "ignore": ["jsx", "global"]
+      }
+    ],
     "react/style-prop-object": 2,
     "react/jsx-wrap-multilines": [
       2,
@@ -83,10 +89,12 @@
     // REF: https://www.npmjs.com/package/eslint-plugin-react-hooks
     "react-hooks/rules-of-hooks": 2,
     "react-hooks/exhaustive-deps": 1,
+    "react/no-children-prop": 0,
 
     // ----- TYPESCRIPT ----- //
     // REF: https://typescript-eslint.io/rules/
     "@typescript-eslint/prefer-enum-initializers": 2,
+    "@typescript-eslint/no-unused-vars": 2,
     "@typescript-eslint/prefer-as-const": 2,
     "@typescript-eslint/no-useless-empty-export": 2,
     "@typescript-eslint/no-unnecessary-type-arguments": 2,
